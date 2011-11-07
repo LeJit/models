@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Name: MyString
+  Category: 
+  SellerID: 
+  Status: 1
+  Condition: MyString
+  BuyerID: 
+  PriceSet: 1
+  PriceSold: 1
+
+two:
+  Name: MyString
+  Category: 
+  SellerID: 
+  Status: 1
+  Condition: MyString
+  BuyerID: 
+  PriceSet: 1
+  PriceSold: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  AcctNum: 1
+  MemberID: 
+  Amt: 1
+
+two:
+  AcctNum: 1
+  MemberID: 
+  Amt: 1

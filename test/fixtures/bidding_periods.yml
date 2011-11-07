@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  StartDt: 2011-10-29
+  EndDt: 2011-10-29
+  ItemID: 
+  NumPeriods: 1
+  Status: 1
+  BiddingCap: 1
+
+two:
+  StartDt: 2011-10-29
+  EndDt: 2011-10-29
+  ItemID: 
+  NumPeriods: 1
+  Status: 1
+  BiddingCap: 1

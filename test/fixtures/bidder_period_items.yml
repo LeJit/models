@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  PeriodID: 
+  BidderID: 
+  ItemID: 
+  AmtBid: 1
+
+two:
+  PeriodID: 
+  BidderID: 
+  ItemID: 
+  AmtBid: 1
