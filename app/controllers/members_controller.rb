@@ -1,12 +1,13 @@
 class MembersController < ApplicationController
 
   def new
-	@auction_item = Member.new
+	@member = Member.new
 	@title = "Sign Up"
 	
 	respond_to do |format|
 		format.html  # addMember.html.erb
 		format.json  { render :json => @member }
+    end
   end
  
  
