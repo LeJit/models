@@ -2,20 +2,20 @@
 
 <%= form_for(@member) do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :FirstName %><br />
+    <%= f.text_field :FirstName %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :LastName %><br />
+    <%= f.text_field :LastName %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :Password %><br />
+    <%= f.password_field :Password %>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>

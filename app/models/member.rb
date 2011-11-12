@@ -1,4 +1,10 @@
 class Member < ActiveRecord::Base
+	attr_accessible :FirstName, :LastName, :Email, :Password
+	
+	validates :FirstName, :presence=>true
+	validates :LastName, :presence=>true
+	validates :Email, :presence=>true
+	validates :Password, :presence=>true
 	has_many :items, :foreign_key => 'SellerID', :dependent => :destroy
 	has_many :items, :foreign_key => 'BuyerID', :dependent => :destroy
 	has_one :bank_acct, :dependent => :destroy
