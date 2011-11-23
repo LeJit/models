@@ -2,8 +2,7 @@ Models::Application.routes.draw do
   get "sessions/new"
   get "home/index"
   get "members/new"
-  
-  match '/signup',  :to => 'members#new'
+  get "pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -19,6 +18,7 @@ Models::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
     resources :members
 	resources :sessions, :only => [:new, :create, :destroy]
+	resources :items, :only => [:create, :destroy, :index]
 	match '/signup', :to=>'members#new'
 	match '/signin',  :to => 'sessions#new'
 	match '/signout', :to => 'sessions#destroy'
@@ -58,7 +58,7 @@ Models::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "home#index"
+   root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

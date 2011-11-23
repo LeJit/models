@@ -1,0 +1,12 @@
+<tr>
+  <td class="item">
+    <span class="content"><%= item.name %></span>
+	<span class="content"><%= item.category_name %></span>
+	<span class="content"><%= item.status %></span>
+	<span class="content"><%= item.condition %></span>
+	<span class="content"><%= item.price_set %></span>
+    <span class="timestamp">
+      Created <%= time_ago_in_words(item.created_at) %> ago.
+    </span>
+  </td>
+</tr>

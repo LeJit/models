@@ -1,0 +1,21 @@
+<%= form_for @item do |f| %>
+  <div class="field">
+    <%= f.label :"Item Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Category%><br />
+    <%= f.text_field :category_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Price%><br />
+    <%= f.text_field :price_set %>
+  </div>
+  <div class="field">
+    <%= f.label :Condition%><br />
+    <%= f.text_field :condition %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

@@ -1,14 +1,14 @@
 class CreateItems < ActiveRecord::Migration
   def self.up
     create_table :items do |t|
-      t.string :Name
-      t.string :category_id
-      t.integer :SellerID
-      t.integer :Status
-      t.string :Condition
-      t.integer :BuyerID
-      t.integer :PriceSet
-      t.integer :PriceSold
+      t.string :name
+      t.string :category_name
+      t.integer :seller_id
+      t.integer :status
+      t.string :condition
+      t.integer :buyer_id
+      t.integer :price_set
+      t.integer :price_sold
 
       t.timestamps
     end

@@ -1,0 +1,18 @@
+<h4>Welcome <%= current_member.first_name %> !</h4> <br>
+<h5> Search Results </h5>
+
+<table class="search">
+  <tr>
+    <td class="main">
+	   <% unless @items1.empty? %>
+          <table class="items" summary="Items in the given category">
+             <%= render @items_found %>
+          </table>
+      <% end %>
+	</td>
+  </tr>
+</table>
+
+<%= link_to "Settings", edit_member_path(current_member) %> <br />
+<%= link_to "Sign out", signout_path, :method=> :delete %> 
+

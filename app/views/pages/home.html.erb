@@ -1,0 +1,16 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="item">Wish to put an item up for auction?</h1>
+        <%= render 'shared/item_form' %>
+      </td>
+    </tr>
+  </table>
+  <%= link_to "Settings", edit_member_path(current_member) %> <br />
+  <%= link_to "Back to List of Items", member_path(current_member) %> <br />
+  <%= link_to "Sign out", signout_path, :method=> :delete %>  
+<% else %>
+  <h1>Tartan MarketPlace</h1>
+  <%= link_to "Sign In!", signin_path %>
+<% end %>

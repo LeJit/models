@@ -1,11 +1,10 @@
 class ItemsController < ApplicationController
+before_filter :authenticate, :only=>[:create, :destroy]
+
   def index
-	@items = Item.all
- 
-	respond_to do |format|
-		format.html  # index.html.erb
-		format.json  { render :json => @items }
-	end
+	@items1 = Item.where(:category_name => params[:category_name])
+	@items_found = @items1
+	render 
   end
   
   
@@ -15,23 +14,21 @@ class ItemsController < ApplicationController
 	respond_to do |format|
 		format.html  # addAuctionItem.html.erb
 		format.json  { render :json => @auction_item }
+    end
   end
   
   
   def create
-	@item = Item.new(params[:item])
-	
-	respond_to do |format|
-		if @item.save
-			format.html  { redirect_to(@item,
-						  :notice => 'Item was successfully added to the auction list.') }
-			format.json  { render :json => @item,
-						   :status => :created, :location => @item }
-		else
-			format.html  { render :action => "new" }
-			format.json  { render :json => @item.errors,
-                    :status => :unprocessable_entity }
-		end			
+    @item  = current_member.items.build(params[:item])
+	@item.seller_id = current_member.id
+	@item.status = 1
+	@item.category_name = 'Electronics'
+	@item.buyer_id = 0
+    if @item.save
+      flash[:success] = "Item up for auction !"
+      redirect_to current_member
+    else
+      render 'pages/home'
     end
   end
   

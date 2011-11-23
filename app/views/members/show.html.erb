@@ -1,0 +1,43 @@
+<h1> Welcome to the show page </h1>
+
+<%= @member.first_name %> <%= @member.last_name %>
+
+<h4> Here is a list of items sold by you: </h4>
+<table class="profile">
+  <tr>
+    <td class="main">
+	   <% unless @items1.empty? %>
+          <table class="items" summary="User items">
+             <%= render @items_sold %>
+          </table>
+      <% end %>
+	</td>
+  </tr>
+</table>
+
+
+<h4> Here is a list of items bought by you: </h4>
+<table class="profile">
+  <tr>
+    <td class="main">
+	   <% unless @member.items.empty? %>
+          <table class="items" summary="User items">
+             <%= render @items_bought %>
+          </table>
+      <% end %>
+	</td>
+  </tr>
+</table>
+
+
+<h4>Search For Items </h4>
+<%= form_tag("/items", :method => "get") do %>
+  <%= label_tag(:category_name, "Enter a category:") %>
+  <%= text_field_tag(:category_name) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<%= link_to "Settings", edit_member_path(current_member) %> <br />
+<%= link_to "Sign out", signout_path, :method=> :delete %>  <br />
+<%= link_to "delete", :method => :delete, :confirm => "Are you sure you want to delete your account?" %>
